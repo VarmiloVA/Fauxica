@@ -49,6 +49,16 @@ nav a.active:before {
     bottom: 0px;
 }
 
+nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid grey;
+    bottom: 0px;
+    transition: width .3s;
+}
+
 /* Hero Section */
 
 main {
@@ -106,6 +116,7 @@ h1 {
 
 .secondary-cta svg {
     width: 20px;
+    transition: transform .3s;
 }
 
 .news {
@@ -210,4 +221,22 @@ p.details {
 
 p.product-price {
     font-size: 1.8rem;
+}
+
+/* Microinteractions */
+
+nav ul li a:hover:before {
+    width: 35%;
+}
+
+.primary-cta:hover {
+    background: #e2d1bd;
+}
+
+.secondary-cta:hover svg {
+    transform: translateX(10px)
+}
+
+.secondary-cta:hover {
+    text-decoration: underline;
 }
