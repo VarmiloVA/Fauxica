@@ -1,5 +1,6 @@
 html {
     font-size: 62.5%;
+    zoom: 1.1;
 }
 
 body {
@@ -21,7 +22,7 @@ header {
 }
 
 nav {
-    margin: 4em;
+    margin: 4em 2em;
 }
 
 nav ul {
@@ -53,7 +54,7 @@ nav a.active:before {
 main {
     display: flex;
     gap: 8em;
-    margin-top: 11em;
+    margin-top: 5em;
 }
 
 .left-col {
@@ -138,3 +139,75 @@ p.details {
     margin: 0;
 }
 
+/* Right column gallery */
+
+.right-col {
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        "left right-top"
+        "left right-btm"; 
+}
+
+.card {
+    border-radius: 1em;
+    padding: 1.1em;
+    display: flex;
+    align-items: end;
+    background-size: 150%;
+}
+
+.card1 {
+    grid-area: left;
+    background-image: url('../img/clothing1.jpg');
+    position: relative;
+}
+
+.card1:before {
+    position: absolute;
+    content: "";
+    background: url('../img/tag.svg') no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: -30%;
+    pointer-events: none;
+}
+
+.card2 {
+    grid-area: right-top;
+    background-image: url('../img/clothing2.jpg');
+}
+
+.card3 {
+    grid-area: right-btm;
+    background-image: url('../img/clothing3.jpg');
+}
+
+.card-details {
+    background-color: aliceblue;
+    border-radius: 5em;
+    padding: 2em;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-details a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.card-details p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+p.product-price {
+    font-size: 1.8rem;
+}
